@@ -25,11 +25,11 @@ export default {
 			this.listOfItems.sort( function(a, b) {
 				var nameA = a[value].toLowerCase(), nameB = b[value].toLowerCase();
 
-				if (nameA < nameB) //сортируем строки по возрастанию
+				if (nameA < nameB) 
 				  return -1
 				if (nameA > nameB)
 				  return 1
-				return 0 // Никакой сортировки
+				return 0
 				});
 		}, 
 		showModal() {

@@ -61,7 +61,9 @@
 	</div>
 </template>
 <script>
-import ListMixin from './Mixin'
+import ListMixin from './js/Mixin'
+import ModalCourse from './ModalWindows/ModalCourse'
+import ChangeCourse from './ModalWindows/ChangeCourse'
 
 export default {
 	data () {
@@ -88,11 +90,24 @@ export default {
 				},
 				{	title: 'GO',
 					code: 'G7477'
+				},
+				{	title: 'VueJS',
+					code: 'V5648'
+				},
+				{	title: 'ReactJS',
+					code: 'R1652'
+				},
+				{	title: 'WebDev',
+					code: 'W5646'
 				}
 			]
 		}
 	},
 	mixins: [ListMixin],
+	components: {
+		addCourse: ModalCourse,
+		changeCourse: ChangeCourse
+	},
 	methods: {
 
 		addItem(obj) {
@@ -103,6 +118,6 @@ export default {
 };
 </script>
 
-<style scoped src="./main.css">
+<style scoped src="./css/main.css">
 
 </style>

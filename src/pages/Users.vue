@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div class="fill-80-viewport bg-light px-100 mt-3">
-			<div class="row bg-dark align-items-center rounded">
+			<div class="row bg-dark align-items-center rounded py-1">
 				<div class="col-4">
 					<h5 class="text-light mb-0 d-inline-block"> NAME </h5>
 					<button class="fas fa-arrows-alt-v bg-none text-light"  @click="sortItems('name')"></button>
@@ -73,25 +73,88 @@
 	</div>
 </template>
 <script>
-import ListMixin from './Mixin'
+import ListMixin from './js/Mixin'
+import ModalUser from './ModalWindows/ModalUser'
+import ChangeUser from './ModalWindows/ChangeUser'
+
 
 export default {
 	data () {
 		return {
 			pageTitle: 'users',
 			listOfItems: [ 
-				{	name: 'Python',
-					mail: 'P6542',
+				{	name: 'Craig Dawson',
+					mail: 'dawson@mail.com',
 					status: 'Active'
 				},
-				{	name: 'Kotlin',
-					mail: 'K1236',
+				{	name: 'Kod Till',
+					mail: 'till@mail.com',
 					status: 'Inactive'
+				},
+				{	name: 'Andy Olby',
+					mail: 'Olby@mail.com',
+					status: 'Inactive'
+				},
+				{	name: 'Makkarti Gektor',
+					mail: 'Makkarti@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Lourens Rendolf',
+					mail: 'Lourens@mail.com',
+					status: 'Inactive'
+				},
+				{	name: 'Uayt Ogastes',
+					mail: 'Uayt@mail.com',
+					status: 'Inactive'
+				},
+				{	name: 'Harrison Lambert',
+					mail: 'Harrison@mail.com',
+					status: 'Inactive'
+				},
+				{	name: 'Kuk Mark',
+					mail: 'Kuk@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Hovard Devid',
+					mail: 'Hovard@mail.com',
+					status: 'Inactive'
+				},
+				{	name: 'Gallaher Kristofer',
+					mail: 'Gallaher@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Taker Oliver',
+					mail: 'Taker@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Perish Kennet',
+					mail: 'Perish@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Pauell Dzhon',
+					mail: 'Pauell@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Filds Devid',
+					mail: 'Filds@mail.com',
+					status: 'Active'
+				},
+				{	name: 'Skott Darsi',
+					mail: 'Skott@mail.com',
+					status: 'Inctive'
+				},
+				{	name: 'Deniel Pol',
+					mail: 'Deniel@mail.com',
+					status: 'Active'
 				}
 			]
 		}
 	},
 	mixins: [ListMixin],
+	components: {
+		addUser: ModalUser,
+		changeUser: ChangeUser
+	},
 	methods: {
 
 		addItem(obj) {
@@ -102,6 +165,6 @@ export default {
 };
 </script>
 
-<style scoped src="./main.css">
+<style scoped src="./css/main.css">
 </style>
 
